@@ -1,4 +1,4 @@
-CARGS=--bind -s NODEJS_CATCH_REJECTION=0 -s NODEJS_CATCH_EXIT=0 -s ALLOW_MEMORY_GROWTH=1 -s SINGLE_FILE=1 -O3
+CARGS=--bind -s NODEJS_CATCH_REJECTION=0 -s NODEJS_CATCH_EXIT=0 -s ALLOW_MEMORY_GROWTH=1  -O3 -s WASM=1 -s EXPORT_ES6=1 -s MODULARIZE=1 -s 'EXPORT_NAME="Wawoff2Module"'
 FIXTURES=/src/wawoff2/test/fixtures
 
 all:
@@ -11,6 +11,7 @@ all:
 	  /src/build/woff2-wasm/libwoff2common.a \
 	  /src/build/brotli-wasm/libbrotlienc.a \
 	  /src/build/brotli-wasm/libbrotlicommon.a
+	  
 
 	emcc $(CARGS) -I/src/woff2/include/ \
 	  -o /src/wawoff2/build/decompress_binding.js \

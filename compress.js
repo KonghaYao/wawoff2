@@ -1,14 +1,14 @@
-'use strict'
+"use strict";
 
-const em_module = require('./build/compress_binding.js')
+import _compress from "./build/compress_binding.js";
 
-const runtimeInit = new Promise(resolve => {
-  em_module.onRuntimeInitialized = resolve
-})
+// const runtimeInit = new Promise((resolve) => {
+//     onRuntimeInitialized = resolve;
+// });
 
-module.exports = async function compress (buffer) {
-  await runtimeInit
-  const result = em_module.compress(buffer)
-  if (result === false) throw new Error('ConvertTTFToWOFF2 failed')
-  return result
+export async function compress(buffer) {
+    const func = await _compress();
+    const result = await func.compress(buffer);
+    if (result === false) throw new Error("ConvertTTFToWOFF2 failed");
+    return result;
 }

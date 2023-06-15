@@ -1,4 +1,4 @@
-FROM emscripten/emsdk:2.0.34
+FROM emscripten/emsdk:3.1.41
 
 RUN git clone --recursive https://github.com/google/woff2.git
 RUN cd woff2 && \

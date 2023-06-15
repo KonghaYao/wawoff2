@@ -1,8 +1,8 @@
 'use strict'
 
-const { extname } = require('path')
+import { extname } from 'path'
 
-exports.swap_ext = (filename, from_ext, to_ext) => {
+export function swap_ext (filename, from_ext, to_ext) {
   const ext = extname(filename)
 
   // if filename has an extension, swap it
