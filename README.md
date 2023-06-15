@@ -1,5 +1,4 @@
-woff2 for node.js (via WebAssembly)
-===================================
+# woff2 for node.js (via WebAssembly)
 
 [![CI](https://github.com/fontello/wawoff2/actions/workflows/ci.yml/badge.svg)](https://github.com/fontello/wawoff2/actions/workflows/ci.yml)
 [![NPM version](https://img.shields.io/npm/v/wawoff2.svg?style=flat)](https://www.npmjs.org/package/wawoff2)
@@ -7,31 +6,26 @@ woff2 for node.js (via WebAssembly)
 Google's [woff2](https://github.com/google/woff2) build for `node.js`, using
 WebAssembly. Why this is better than binary bindings:
 
-- works everywhere without rebuild
+-   works everywhere without rebuild
 
-
-Install
--------
+## Install
 
 ```sh
-npm install wawoff2
+npm install @chinese-fonts/wawoff2
 ```
 
-
-Use Example
------------
+## Use Example
 
 ```js
-const wawoff = require('wawoff2');
+import { compress } from "@chinese-fonts/wawoff2";
 
 // src - Buffer or Uint8Array
-wawoff.compress(src).then(out => {
-  // store result
+compress(src).then((out) => {
+    // store result
 });
 ```
 
-Command-line Example
---------------------
+## Command-line Example
 
 To compress a `.ttf` file into a `.woff2` file:
 

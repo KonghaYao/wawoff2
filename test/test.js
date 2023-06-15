@@ -10,9 +10,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 describe('chain', function () {
-  const sample = Uint8Array.from(
-    read(join(__dirname, './fixtures/sample.ttf'))
-  )
+  const sample = read(join(__dirname, './fixtures/sample.ttf'))
+
   const sample_compressed = Uint8Array.from(
     read(join(__dirname, './fixtures/sample_compressed.woff2'))
   )
