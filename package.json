@@ -1,6 +1,6 @@
 {
     "name": "@chinese-fonts/wawoff2",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Convert TTF font to WOFF2",
     "type": "module",
     "main": "index.js",
